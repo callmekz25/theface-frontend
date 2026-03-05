@@ -1,0 +1,11 @@
+export const PER_PRODUCT_CREATE = 'product:create';
+export const PER_PRODUCT_UPDATE = 'product:update';
+export const PER_PRODUCT_DELETE = 'product:delete';
+export const PER_PRODUCT_LIST = 'product:list';
+export const PER_COLLECTION_LIST = 'collection:list';
+export const PER_COLLECTION_CREATE = 'collection:create';
+export const PER_COLLECTION_UPDATE = 'collection:update';
+export const PER_COLLECTION_DELETE = 'collection:delete';
+export const PER_BRAND_CREATE = 'brand:create';
+export const PER_BRAND_UPDATE = 'brand:update';
+export const PER_BRAND_DELETE = 'brand:delete';
