@@ -7,9 +7,12 @@ import {
   Youtube,
   UserRound,
 } from 'lucide-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { Cart } from './cart/cart';
 
 export function Header() {
+  const [openCart, setOpenCart] = React.useState(false);
   return (
     <>
       {/* Top Bar */}
@@ -65,13 +68,13 @@ export function Header() {
                   Đăng nhập
                 </Link>
               </div>
-              <button className="relative">
+              <button className="relative" onClick={() => setOpenCart(true)}>
                 <ShoppingCart
                   strokeWidth="1"
                   size={30}
                   className="text-gray-700 hover:text-green-700"
                 />
-                <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   0
                 </span>
               </button>
@@ -104,6 +107,7 @@ export function Header() {
           </nav>
         </div>
       </header>
+      <Cart open={openCart} onClose={() => setOpenCart(false)} />
     </>
   );
 }

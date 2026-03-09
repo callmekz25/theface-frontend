@@ -1,7 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom';
-import HomePage from '@/pages';
 import MainLayout from '@/layout/main-layout';
-import { DEFAULT } from '@/constants/routes-constants';
+import {
+  COLLECTION_DETAIL,
+  DEFAULT,
+  PRODUCT_DETAIL,
+} from '@/constants/routes-constants';
+import ProductDetail from '@/pages/products/product-detail';
+import Index from '@/pages/home/index';
+import { CollectionDetail } from '@/pages/products/collection-detail';
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +16,15 @@ export const router = createBrowserRouter([
       {
         path: DEFAULT,
         index: true,
-        element: <HomePage />,
+        element: <Index />,
+      },
+      {
+        path: PRODUCT_DETAIL,
+        element: <ProductDetail />,
+      },
+      {
+        path: COLLECTION_DETAIL,
+        element: <CollectionDetail />,
       },
     ],
   },

@@ -1,4 +1,7 @@
-export default function ButtonAnimation() {
+interface Props {
+  title?: string;
+}
+export default function ButtonAnimation({ title = 'Xem tất cả' }: Props) {
   return (
     <button
       className="relative overflow-hidden hover:cursor-pointer min-w-50 rounded-full bg-white text-sm  px-4 py-2 font-bold group"
@@ -14,7 +17,7 @@ export default function ButtonAnimation() {
       ></span>
 
       <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-        Xem tất cả
+        {title}
       </span>
     </button>
   );

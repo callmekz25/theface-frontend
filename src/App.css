@@ -3,3 +3,55 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+.round-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cac5c5;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.round-checkbox:checked {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+button:hover {
+  cursor: pointer;
+}
+
+.search-box {
+  border: 1px solid #ddd;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  padding: 8px 11px;
+  transition: border-color 0.2s;
+}
+
+.search-box:focus-within {
+  border-color: var(--primary);
+}
+
+.search-box:hover {
+  border-color: var(--primary);
+}
+
+.round-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.button-remove-cart:hover {
+  background: var(--primary);
+  color: white;
+}
